@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float speed = 10f;
     Rigidbody2D rb;
     private Animator anim;
-    public float MovementSpeed;
     private Vector2 MovementInput;
 
 
