@@ -131,7 +131,7 @@ TextureImporter:
         width: 126
         height: 59
       alignment: 9
-      pivot: {x: 0.7178278, y: 0.3621658}
+      pivot: {x: 0.8764995, y: 0.34183413}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 109
         height: 61
       alignment: 9
-      pivot: {x: 0.70474076, y: 0.38265228}
+      pivot: {x: 0.8441386, y: 0.38265216}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
         width: 125
         height: 59
       alignment: 9
-      pivot: {x: 0.6145313, y: 0.36440095}
+      pivot: {x: 0.7424839, y: 0.3508465}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
         width: 120
         height: 60
       alignment: 9
-      pivot: {x: 0.76316935, y: 0.3666608}
+      pivot: {x: 0.89252216, y: 0.36019376}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: shotgun_fire_4
       rect:
         serializedVersion: 2
-        x: 624
-        y: 85
+        x: 623
+        y: 86
         width: 138
         height: 60
       alignment: 9
-      pivot: {x: 0.75009906, y: 0.37106934}
+      pivot: {x: 0.9020346, y: 0.34742165}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +236,7 @@ TextureImporter:
         width: 156
         height: 60
       alignment: 9
-      pivot: {x: 0.64495146, y: 0.38098717}
+      pivot: {x: 0.7817606, y: 0.35920933}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
