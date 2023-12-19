@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     private Animator anim;
     private Vector2 MovementInput;
-    public GameObject Shotgun;
+    public Shotgun Weapon;
 
 
     private void Awake() {
@@ -27,6 +28,10 @@ public class Player : MonoBehaviour
     {
         Move();
         Animate();
+        if (Mouse.current.leftButton.wasPressedThisFrame){
+            
+            Weapon.Fire();
+       }
     }
 
 
@@ -47,9 +52,9 @@ public class Player : MonoBehaviour
             anim.SetFloat("MovementY", MovementInput.y);
             anim.SetBool("Idle", false);
             if (MovementInput.y == 0) { // left and right
-                Shotgun.transform.localPosition = new Vector3(0, -0.165f, 1);
-                Vector2 scale = Shotgun.transform.localScale;
-                // Shotgun.transform.rotation = Quaternion.identity;
+                Weapon.transform.localPosition = new Vector3(0, -0.165f, 1);
+                Vector2 scale = Weapon.transform.localScale;
+                // Weapon.transform.rotation = Quaternion.identity;
 
                 if (MovementInput.x == -1) {
 
@@ -59,7 +64,7 @@ public class Player : MonoBehaviour
 
                     scale.y = .35f;
                 }
-                Shotgun.transform.localScale = scale;
+                Weapon.transform.localScale = scale;
 
             }
             else 
@@ -68,7 +73,7 @@ public class Player : MonoBehaviour
                 if (MovementInput.y == -1) { // 
                     z = 1;
                 }
-                Shotgun.transform.localPosition = new Vector3(0.23f, -.165f, z);
+                Weapon.transform.localPosition = new Vector3(0.23f, -.165f, z);
             }
         }
         else {

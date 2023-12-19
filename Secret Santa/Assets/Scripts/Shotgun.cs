@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Shotgun : MonoBehaviour
 {
     public Camera cam;
     Transform my;
+
+    public Transform shootingPoint;
+    public GameObject bulletPrefab;
 
 
     void Awake()
@@ -27,5 +31,13 @@ public class Shotgun : MonoBehaviour
         float angle = (180 / Mathf.PI) * AngleRad;
 
         my.rotation = Quaternion.Euler(0, 0, angle);
+
+       
+    }
+
+    public void Fire() {
+        GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
+        bulletPrefab.GetComponent<Rigidbody2D>().AddForce(shootingPoint.up * 200f, ForceMode2D.Impulse);
+ 
     }
 }
